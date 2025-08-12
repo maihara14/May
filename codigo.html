@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluraflix</title>
+    <!-- Include Tailwind CSS via CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Apply a dark purple background and white text to the entire page */
+        body {
+            background-color: #4c1d95; /* A shade of purple */
+            color: #ffffff; /* White text */
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-purple-900 text-white min-h-screen flex flex-col items-center justify-center p-4">
+
+    <!-- Main content container, centered and with some padding -->
+    <div class="max-w-4xl w-full text-center">
+
+        <!-- Header section with a bolder font and padding -->
+        <header class="text-4xl font-extrabold mb-8">
+            ALURAFLIX
+        </header>
+
+        <!-- A container for the movie content -->
+        <div class="bg-purple-800/50 rounded-lg p-8 shadow-2xl">
+            <h1 class="text-3xl font-bold mb-2">MINHA CULPA (FILME)</h1>
+            <p class="text-lg text-purple-200 mb-6">#filme-acao</p>
+
+            <!--
+                The iframe is updated to use the /embed/ URL for better compatibility.
+                It's wrapped in a responsive container to maintain aspect ratio on different screens.
+            -->
+            <div class="relative w-full overflow-hidden rounded-lg" style="padding-top: 56.25%">
+                <iframe 
+                    class="absolute top-0 left-0 w-full h-full" 
+                    src="https://www.youtube.com/embed/u9G-KGog3Yw" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
